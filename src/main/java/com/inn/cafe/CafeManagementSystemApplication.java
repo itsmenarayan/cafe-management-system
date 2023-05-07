@@ -11,3 +11,9 @@ public class CafeManagementSystemApplication {
 	}
 
 }
+
+//online database
+//https://www.db4free.net/phpMyAdmin/index.php?route=/database/sql&db=cafemanagement
+
+
+//http://localhost:8085/user/signup
