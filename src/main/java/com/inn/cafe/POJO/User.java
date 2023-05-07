@@ -3,12 +3,16 @@ package com.inn.cafe.POJO;
 
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
-
+import org.hibernate.annotations.DynamicUpdate;
 import javax.persistence.*;
 import java.io.Serializable;
 
+@NamedQuery(name = "User.findByEmailId", query = "select u from User u where u.email = :email")
+
+
 @Data
 @DynamicInsert
+@DynamicUpdate
 @Entity
 @Table(name = "user")
 public class User implements Serializable {
