@@ -49,7 +49,7 @@ public class JwtUtil {
                 .setSubject(subject)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis()+1000*60*60*10))
-                .signWith(SignatureAlgorithm.ES256, secret).compact();
+                .signWith(SignatureAlgorithm.HS256, secret).compact();
     }
 
     public Boolean validToken(String token, UserDetails userDetails){
