@@ -9,6 +9,10 @@ import java.io.Serializable;
 
 @NamedQuery(name = "User.findByEmailId", query = "select u from User u where u.email = :email")
 
+@NamedQuery(name = "User.getAllUser", query = "select new com.inn.cafe.wrapper.UserWrapper(u.id, u.name, u.email, u.contact, u.status) from User u where u.role = 'user'")
+
+@NamedQuery(name = "User.updateStatus", query = "update User u set u.status = :status where u.id = :id")
+
 
 @Data
 @DynamicInsert
@@ -41,3 +45,11 @@ public class User implements Serializable {
     private String role;
 
 }
+
+
+//{
+//    "name": "kishan",
+//    "email": "kisan@gmail.com",
+//    "contactNumber": "7589426834",
+//    "password": "123456"
+//}
